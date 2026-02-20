@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tools</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" /> 
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q919W0VJ1S"></script>
+      <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-Q919W0VJ1S');
+      </script>
+  </head>
+  <body>
+    <nav>
+      <button type="button" class="nav-btn" onclick="location.href='/start.html'">Home</button>
+      <button type="button" class="nav-btn" onclick="location.href='/select.html'">Games</button>
+      <button type="button" class="nav-btn" aria-current="page" onclick="location.href='/tools.html'">Tools</button>
+      <button type="button" class="nav-btn" onclick="location.href='/settings.html'">Settings</button>
+      <button type="button" class="nav-btn" onclick="location.href='/disclaimer.html'">Disclaimer</button>
+    </nav>
+    <div id="games">
+      <main>
+        <h1>Tools</h1>
+        <button class="button" onclick="window.location.href='pages/tool-pages/wavesai.html'">Waves AI</button>
+        <button class="button" onclick="window.location.href='pages/tool-pages/pico.html'">Pico 8 (Retro Game Engine)</button>
+        <button class="button" onclick="window.location.href='pages/tool-pages/simplecalculator.html'">Simple Calculator</button>
+      </main>
+    </div>
+  </body>
+  <script>
+    // Tab cloaker script for all pages except search
+    (function() {
+      const value = localStorage.getItem('tabCloaker') || 'default';
+      const favicon = document.querySelector("link[rel~='icon']") || (() => {
+        const link = document.createElement('link');
+        link.rel = 'icon';
+        document.head.appendChild(link);
+        return link;
+      })();
+      if (value === 'google') {
+        document.title = 'Google';
+        favicon.href = 'https://www.google.com/favicon.ico';
+      } else if (value === 'vocab') {
+        document.title = 'My Learning | Vocabulary.com';
+        favicon.href = 'https://www.vocabulary.com/favicon.ico';
+      } else {
+        document.title = 'Tools';
+        favicon.href = '/favicon.ico';
+      }
+    })();
+  </script>
+</html>

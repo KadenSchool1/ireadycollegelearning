@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DotGUI</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q919W0VJ1S"></script>
+      <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-Q919W0VJ1S');
+      </script>
+  </head>
+  <body>
+    <nav>
+      <button type="button" class="nav-btn" aria-current="page" onclick="location.href='/start.html'">Home</button>
+      <button type="button" class="nav-btn" onclick="location.href='/select.html'">Games</button>
+      <button type="button" class="nav-btn" onclick="location.href='/tools.html'">Tools</button>
+      <button type="button" class="nav-btn" onclick="location.href='/settings.html'">Settings</button>
+      <button type="button" class="nav-btn" onclick="location.href='/disclaimer.html'">Disclaimer</button>
+    </nav>
+  <div id="main">
+    <main>
+      <h1>DotGUI</h1>
+      <p id="random-text" style="font-size:1.2em; margin:20px 0;"></p>
+      <p>Join our <a onclick=window.location.href="https://discord.com/invite/U8tT8AazXb">community server</a> to report problems and get more links. Make sure to star DotGUI on GitHub if you fork it!</p>
+    <script>
+        const texts = [
+            '"Work on DotGUI, or quit and play Roblox until your screentime is over? Hmm..." - DotLYHiyou, probably',
+            "No, the name isn't inspired by c00lGUI, and no, the DotLYHiyou isn't a creep cuz he frequently plays Forsaken.",
+            "Did you know? DotGUI used to be the Zenithub Rework Update, but then I thought it through and realized throwing a rebrand in would be cool. Yeah, so much for being cool...",
+            "If I were to remake DotGUI, I would make sure a search would be available on day one.",
+            "One of my biggest regrets to date is not staying on the earliest branding, BlackoutGames. Idk man, smth about OG BlackoutGames hit hard.", 
+            "Give the Despotic Ruins theme from Flood Escape 2 a listen. I loop it while I work.",
+            "Militant is the best TDS starter tower when you start the game. Change my mind.",
+            "Who needs global announcements that very easily get hijacked when you have these?",
+            "STOP ASKING FOR ROBLOX!!!! IT ISNT POSSIBLE ANYMORE BRO, MAYBE BUY I VPS OR SMTH IDK",
+            "PLEASE stop using the request form for problems. Instead, use the DISCORD SERVER or THE GITHUB.",
+            "There is like 5-6 people who prob still check the community server. Please join it.",
+            "I am NOT looking for people to help me work on this site. Don't even dream of getting hired. Stop asking.",
+            "Before you crashout and say 'wHy DId yOu aDd ADs to ur site???!?!!?', I just need the money. None will be on the games, and they only work on ONE link and ONE link only. Not gonna say which one, join the server for that.",
+            "I'm looking into using Emscripten to port more games. Stay tuned!"
+        ];
+        document.getElementById("random-text").textContent = texts[Math.floor(Math.random() * texts.length)];
+    </script>
+    </main>
+  </div>
+  </body>
+  <script>
+    (function() {
+      const value = localStorage.getItem('tabCloaker') || 'default';
+      const favicon = document.querySelector("link[rel~='icon']") || (() => {
+        const link = document.createElement('link');
+        link.rel = 'icon';
+        document.head.appendChild(link);
+        return link;
+      })();
+      if (value === 'google') {
+        document.title = 'Google';
+        favicon.href = 'https://www.google.com/favicon.ico';
+      } else if (value === 'vocab') {
+        document.title = 'My Learning | Vocabulary.com';
+        favicon.href = 'https://www.vocabulary.com/favicon.ico';
+      } else {
+        document.title = 'DotGUI';
+        favicon.href = '/favicon.ico';
+      }
+    })();
+  </script>
+  <footer>
+    <p>Made by <a onclick="window.location.href='https://dotlyhiyou.carrd.co'">DotLYHiyou</a>. Visit my carrd for more on me.</p>
+  </footer>
+</html>

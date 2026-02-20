@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Games</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q919W0VJ1S"></script>
+      <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-Q919W0VJ1S');
+      </script>
+  </head>
+  <body>
+    <nav>
+      <button type="button" class="nav-btn" onclick="location.href='/start.html'">Home</button>
+      <button type="button" class="nav-btn" aria-current="page" onclick="location.href='/select.html'">Games</button>
+      <button type="button" class="nav-btn" onclick="location.href='/tools.html'">Tools</button>
+      <button type="button" class="nav-btn" onclick="location.href='/settings.html'">Settings</button>
+      <button type="button" class="nav-btn" onclick="location.href='/disclaimer.html'">Disclaimer</button>
+    </nav>
+    <div id="games">
+      <main>
+        <h1>Games:</h1>
+        <div class="search-bar-container">
+          <input
+            id="game-search"
+            class="search-bar"
+            type="text"
+            placeholder="Look for a game you want..."
+            autocomplete="off"
+            oninput="filterGames()"
+          />
+        </div>
+        <div id="no-results-message" style="display:none; text-align:center; font-family: Ubuntu, sans-serif; color: #099eda; font-size: 1.2em; margin-top: 30px; background: rgba(0,0,0,0.7); border-radius: 12px; padding: 18px 24px; box-shadow: 0 2px 16px #00ffff33;">
+          No results found. <a href="https://forms.gle/d8hBcyNGbLXk7cEk9" style="color:#00ffff; text-decoration:underline;">Game request form</a> is right here brodie.
+        </div>
+        <button class="button" id="request" onclick="window.open('https://forms.gle/d8hBcyNGbLXk7cEk9', '_blank')">Game Request Form</button>
+        <div id="game-buttons">
+          <button class="button" data-title="Fruit Ninja" onclick="window.location.href='pages/game-pages/fruitninja.html'">Fruit Ninja</button>
+          <button class="button" data-title="1v1.lol" onclick="window.location.href='pages/game-pages/1v1lol.html'">1v1.lol</button>
+          <button class="button" data-title="Taisei Project" onclick="window.location.href='pages/game-pages/taiseiproject.html'">Taisei Project</button>
+          <button class="button" data-title="Metroid Fusion" onclick="window.location.href='pages/game-pages/metroidfusion.html'">Metroid Fusion</button>
+          <button class="button" data-title="Celeste" onclick="window.location.href='pages/game-pages/celeste.html'">Celeste (PICO-8 ORIGINAL VERSION)</button>
+          <button class="button" data-title="Slope" onclick="window.location.href='pages/game-pages/slope.html'">Slope</button>
+          <button class="button" data-title="Slope Plus" onclick="window.location.href='pages/game-pages/slopeplus.html'">Slope Plus</button>
+          <button class="button" data-title="Slope 2 Player" onclick="window.location.href='pages/game-pages/slope2player.html'">Slope 2 Player</button>
+          <button class="button" data-title="Eaglercraft 1.5.2" onclick="window.location.href='pages/game-pages/eaglercraft152.html'">Eaglercraft 1.5.2</button>
+          <button class="button" data-title="Eaglercraft 1.12.2" onclick="window.location.href='pages/game-pages/eaglercraft122.html'">Eaglercraft 1.12.2</button>
+          <button class="button" data-title="Mario Combat" onclick="window.location.href='pages/game-pages/mariocombat.html'">Mario Combat</button>
+          <button class="button" data-title="Super Mario Bros" onclick="window.location.href='pages/game-pages/supermariobros.html'">Super Mario Bros</button>
+          <button class="button" data-title="Mario Kart 64" onclick="window.location.href='pages/game-pages/mariokart64.html'">Mario Kart 64</button>
+          <button class="button" data-title="Baldi's Basics" onclick="window.location.href='pages/game-pages/baldibasics.html'">Baldi's Basics</button>
+          <button class="button" data-title="Vex" onclick="window.location.href='pages/game-pages/vex.html'">Vex</button>
+          <button class="button" data-title="Vex 2" onclick="window.location.href='pages/game-pages/vex2.html'">Vex 2</button>
+          <button class="button" data-title="Vex 3" onclick="window.location.href='pages/game-pages/vex3.html'">Vex 3</button>
+          <button class="button" data-title="Volley Random" onclick="window.location.href='pages/game-pages/volleyrandom.html'">Volley Random</button>
+          <button class="button" data-title="Soccer Random" onclick="window.location.href='pages/game-pages/soccerrandom.html'">Soccer Random</button>
+          <button class="button" data-title="Basket Random" onclick="window.location.href='pages/game-pages/basketrandom.html'">Basket Random</button>
+          <button class="button" data-title="Boxing Random" onclick="window.location.href='pages/game-pages/boxingrandom.html'">Boxing Random</button>
+          <button class="button" data-title="Nuts" onclick="window.location.href='pages/game-pages/nutsnbolts.html'">Nuts and Bolts Screwing Puzzle</button>
+          <button class="button" data-title="Cookie Clicker" onclick="window.location.href='pages/game-pages/cookieclicker.html'">Cookie Clicker</button>
+          <button class="button" data-title="Super Smash Bros" onclick="window.location.href='pages/game-pages/supersmashbros.html'">Super Smash Bros</button>
+          <button class="button" data-title="Soccer Skills" onclick="window.location.href='pages/game-pages/soccerskills.html'">Soccer Skills World Cup</button>
+          <button class="button" data-title="N-Gon" onclick="window.location.href='pages/game-pages/ngon.html'">N-Gon</button>
+          <button class="button" data-title="Drift Hunters" onclick="window.location.href='pages/game-pages/drifthunters.html'">Drift Hunters</button>
+          <button class="button" data-title="Subway Surfers" onclick="window.location.href='pages/game-pages/subwaysurferswinterholiday.html'">Subway Surfers: Winter Holiday</button>
+          <button class="button" data-title="Subway Surfers" onclick="window.location.href='pages/game-pages/subwaysurfersmiami.html'">Subway Surfers: Miami</button>
+          <button class="button" data-title="Rooftop Snipers" onclick="window.location.href='pages/game-pages/rooftopsnipers.html'">Rooftop Snipers</button>
+          <button class="button" data-title="Rooftop Snipers" onclick="window.location.href='pages/game-pages/rooftopsnipers2.html'">Rooftop Snipers 2</button>
+          <button class="button" data-title="Bitlife" onclick="window.location.href='pages/game-pages/bitlife.html'">Bitlife</button>
+          <button class="button" data-title="Fancy Pants Adventure" onclick="window.location.href='pages/game-pages/fancypantsadventure.html'">Fancy Pants Adventure</button>
+          <button class="button" data-title="Line Rider" onclick="window.location.href='pages/game-pages/linerider.html'">Line Rider</button>
+          <button class="button" data-title="Deltarune" onclick="window.location.href='pages/game-pages/deltarune.html'">Deltarune</button>
+          <button class="button" data-title="Unfair Undyne" onclick="window.location.href='pages/game-pages/unfairundyne.html'">Unfair Undyne</button>
+          <button class="button" data-title="Ultrakill" onclick="window.location.href='pages/game-pages/ultrakill.html'">Ultrakill</button>
+          <button class="button" data-title="Pokemon" onclick="window.location.href='pages/game-pages/pokemonfirered.html'">Pokemon Fire Red</button>
+          <button class="button" data-title="Pokemon" onclick="window.location.href='pages/game-pages/pokemonleafgreen.html'">Pokemon Leaf Green</button>
+          <button class="button" data-title="Pokemon" onclick="window.location.href='pages/game-pages/pokemonunbound.html'">Pokemon Unbound</button>
+          <button class="button" data-title="Pokemon" onclick="window.location.href='pages/game-pages/pokemonstadium.html'"">Pokemon Stadium</button>
+          <button class="button" data-title="Pokemon" onclick="window.location.href='pages/game-pages/pokemonemerald.html'">Pokemon Emerald</button>
+          <button class="button" data-title="Pokemon" onclick="window.location.href='pages/game-pages/pokemonemeraldrg.html'">Pokemon Emerald: Rouge</button>
+          <button class="button" data-title="Pokemon" onclick="window.location.href='pages/game-pages/pokemonruby.html'">Pokemon Ruby</button>
+          <button class="button" data-title="Sonic The Hedgehog" onclick="window.location.href='pages/game-pages/sonicthehedgehog.html'">Sonic the Hedgehog</button>
+          <button class="button" data-title="Riddle School" onclick="window.location.href='pages/game-pages/riddleschool.html'">Riddle School</button>
+          <button class="button" data-title="Red Ball" onclick="window.location.href='pages/game-pages/redball.html'">Red Ball 4</button>
+          <button class="button" data-title="OvO" onclick="window.location.href='pages/game-pages/ovo.html'">OvO</button>
+          <button class="button" data-title="OvO 2" onclick="window.location.href='pages/game-pages/ovo2.html'">OvO 2</button>
+          <button class="button" data-title="Fifa 11" onclick="window.location.href='pages/game-pages/fifa11.html'">FIFA 11</button>
+          <button class="button" data-title="Funny Shooter 2" onclick="window.location.href='pages/game-pages/funnyshooter2.html'">Funny Shooter 2</button>
+          <button class="button" data-title="Retro Bowl" onclick="window.location.href='pages/game-pages/retrobowl.html'">Retro Bowl</button>
+          <button class="button" data-title="Retro Bowl" onclick="window.location.href='pages/game-pages/retrobowlcollege.html'">Retro Bowl College</button>
+          <button class="button" data-title="Tiny Fishing" onclick="window.location.href='pages/game-pages/tinyfishing.html'"">Tiny Fishing</button>
+          <button class="button" data-title="Doom" onclick="window.location.href='pages/game-pages/doom.html'"">Doom</button>
+          <button class="button" data-title="Among Us" onclick="window.location.href='pages/game-pages/amongus.html'"">Among Us</button>
+          <button class="button" data-title="Geometry Dash" onclick="window.location.href='pages/game-pages/geometrydash.html'"">Geometry Dash</button>
+          <button class="button" data-title="Geometry Dash" onclick="window.location.href='pages/game-pages/geometrydashdemake.html'"">Geometry Dash DEMAKE</button>
+          <button class="button" data-title="Crossy Roads" onclick="window.location.href='pages/game-pages/crossyroads.html'"">Crossy Roads</button>
+          <button class="button" data-title="MotoX3M" onclick="window.location.href='pages/game-pages/motox3m.html'"">MotoX3M</button>
+          <button class="button" data-title="Omori" onclick="window.location.href='pages/game-pages/omori.html'"">Omori</button>
+          <button class="button" data-title="Bad Time Simulator" onclick="window.location.href='pages/game-pages/badtimesimulator.html'"">Bad Time Simulator</button>
+          <button class="button" data-title="CSGO Clicker" onclick="window.location.href='pages/game-pages/csgoclicker.html'"">CSGO Clicker</button>
+          <button class="button" data-title="Yume Nikki" onclick="window.location.href='pages/game-pages/yumenikki.html'"">Yume Nikki</button>
+          <button class="button" data-title="FNF" onclick="window.location.href='pages/game-pages/fnf.html'"">Friday Night Funkin</button>
+          <button class="button" data-title="Snowbattleio" onclick="window.location.href='pages/game-pages/snowbattle.html'"">Snow Battle IO</button>
+          <button class="button" data-title="The Legend of Zelda: Ocarina of Time" onclick="window.location.href='pages/game-pages/ocarina.html'"">The Legend of Zelda: Ocarina of Time</button>
+          <button class="button" data-title="Karlson" onclick="window.location.href='pages/game-pages/karl.html'"">Karlson</button>
+          <button class="button" data-title="Metal Gear Solid" onclick="window.location.href='pages/game-pages/metal.html'"">Metal Gear Solid</button>
+          <button class="button" data-title="Jetpack Joyride" onclick="window.location.href='pages/game-pages/jet.html'"">Jetpack Joyride</button>
+          <button class="button" data-title="FNAF" onclick="window.location.href='pages/game-pages/fnaf.html'"">Five Nights at Freddy's</button>
+          <button class="button" data-title="FNAF" onclick="window.location.href='pages/game-pages/fnaf2.html'"">Five Nights at Freddy's 2</button>
+          <button class="button" data-title="FNAF" onclick="window.location.href='pages/game-pages/fnaf3.html'"">Five Nights at Freddy's 3</button>
+          <button class="button" data-title="FNAF" onclick="window.location.href='pages/game-pages/fnaf4.html'"">Five Nights at Freddy's 4</button>
+          <button class="button" data-title="Hollow Knight" onclick="window.location.href='pages/game-pages/hollow.html'"">Hollow Knight</button>
+          <button class="button" data-title="Granny" onclick="window.location.href='pages/game-pages/granny.html'"">Granny</button>
+          <button class="button" data-title="Granny 2" onclick="window.location.href='pages/game-pages/granny2.html'"">Granny 2</button>
+          <button class="button" data-title="Ice Dodo" onclick="window.location.href='pages/game-pages/icedodo.html'"">Ice Dodo</button>
+          <button class="button" data-title="Clash of Vikings" onclick="window.location.href='pages/game-pages/clash.html'"">Clash of Vikings</button>
+          <button class="button" data-title="Agar.io" onclick="window.location.href='pages/game-pages/agario.html'"">Agar IO</button>
+          <button class="button" data-title="Awesome Tanks" onclick="window.location.href='pages/game-pages/awesome.html'"">Awesome Tanks</button>
+          <button class="button" data-title="Binding" onclick="window.location.href='pages/game-pages/binding.html'"">Binding Of Issac: Wrath of the Lamb</button>
+          <button class="button" data-title="Hollow Knight" onclick="window.location.href='pages/game-pages/silksong.html'"">Hollow Knight: Silksong (PICO-8 REMAKE)</button>
+          <button class="button" data-title="Basketball Stars" onclick="window.location.href='pages/game-pages/basketstars.html'"">Basketball Stars</button>
+          <button class="button" data-title="R.E.P.O" onclick="window.location.href='pages/game-pages/repo.html'"">R.E.P.O</button>
+          <button class="button" data-title="Football Bros" onclick="window.location.href='pages/game-pages/footbros.html'"">Football Bros</button>
+          <button class="button" data-title="Baseball Bros" onclick="window.location.href='pages/game-pages/basebros.html'"">Baseball Bros</button>
+          <button class="button" data-title="Basket Bros" onclick="window.location.href='pages/game-pages/basketbros.html'"">Basket Bros</button>
+          <button class="button" data-title="Snow Rider 3D" onclick="window.location.href='pages/game-pages/snowrider.html'"">Snow Rider 3D</button>
+          <button class="button" data-title="Stick Slasher" onclick="window.location.href='pages/game-pages/stickslasher.html'"">Stick Slasher</button>
+          <button class="button" data-title="Block Blast" onclick="window.location.href='pages/game-pages/blockblast.html'"">Block Blast</button>
+          <button class="button" data-title="Super Mario 64" onclick="window.location.href='pages/game-pages/supermario64.html'"">Super Mario 64</button>
+          <button class="button" data-title="They Are Coming" onclick="window.location.href='pages/game-pages/theycomin.html'"">They Are Coming</button>
+          <button class="button" data-title="Paper IO" onclick="window.location.href='pages/game-pages/paperio.html'"">Paper IO</button>
+          <button class="button" data-title="Gladdihoppers" onclick="window.location.href='pages/game-pages/gladdihoppers.html'"">Gladdihoppers</button>
+          <button class="button" data-title="Kindergarten" onclick="window.location.href='pages/game-pages/kinder.html'"">Kindergarten</button>
+          <button class="button" data-title="Kindergarten" onclick="window.location.href='pages/game-pages/kinder2.html'"">Kindergarten 2</button>
+          <button class="button" data-title="Kindergarten" onclick="window.location.href='pages/game-pages/kinder3.html'"">Kindergarten 3</button>
+          <button class="button" data-title="Silent Hill" onclick="window.location.href='pages/game-pages/silentps1.html'"">Silent Hill PS1</button>
+          <button class="button" data-title="Call of Duty" onclick="window.location.href='pages/game-pages/codmw4.html'"">Call of Duty 4 - Modern Warfare</button>
+          <button class="button" data-title="House of Hazards" onclick="window.location.href='pages/game-pages/hazard.html'"">House of Hazards</button>
+          
+        </div>
+      </main>
+    </div>
+  </body>
+  <script>
+    // Tab cloaker
+    (function() {
+      const value = localStorage.getItem('tabCloaker') || 'default';
+      const favicon = document.querySelector("link[rel~='icon']") || (() => {
+        const link = document.createElement('link');
+        link.rel = 'icon';
+        document.head.appendChild(link);
+        return link;
+      })();
+      if (value === 'google') {
+        document.title = 'Google';
+        favicon.href = 'https://www.google.com/favicon.ico';
+      } else if (value === 'vocab') {
+        document.title = 'My Learning | Vocabulary.com';
+        favicon.href = 'https://www.vocabulary.com/favicon.ico';
+      } else {
+        document.title = 'Games';
+        favicon.href = '/favicon.ico';
+      }
+    })();
+
+    // Game button filter
+    function filterGames() {
+      const input = document.getElementById('game-search').value.toLowerCase();
+      const buttons = document.querySelectorAll('#game-buttons .button');
+      let anyVisible = false;
+      buttons.forEach(btn => {
+        const title = btn.getAttribute('data-title').toLowerCase();
+        if (title.includes(input)) {
+          btn.style.display = '';
+          anyVisible = true;
+        } else {
+          btn.style.display = 'none';
+        }
+      });
+      document.getElementById('no-results-message').style.display = anyVisible ? 'none' : 'block';
+    }
+  </script>
+</html>
