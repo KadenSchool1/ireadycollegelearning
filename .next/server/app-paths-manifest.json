@@ -1,0 +1,11 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/page": "app/page.js",
+  "/games/[slug]/page": "app/games/[slug]/page.js",
+  "/disclaimer/page": "app/disclaimer/page.js",
+  "/games/page": "app/games/page.js",
+  "/settings/page": "app/settings/page.js",
+  "/tools/[slug]/page": "app/tools/[slug]/page.js",
+  "/tools/page": "app/tools/page.js",
+  "/start/page": "app/start/page.js"
+}
