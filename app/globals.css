@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+  --color-accent-cyan: #00eaff;
+  --color-accent-light: #b1e8fc;
+  --color-accent-medium: #066b99;
+  --color-accent-dark: #00113d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  color: #b1e8fc;
+  background: linear-gradient(180deg, #066b99 20%, #00113d 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #00113d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #066b99;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00eaff;
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  transition: all 0.3s ease;
+}
+
+/* Button hover effects */
+.btn-primary {
+  @apply relative inline-flex items-center justify-center px-8 py-4 text-base font-normal text-accent-cyan bg-black rounded-full transition-all duration-200;
+}
+
+.btn-primary:hover {
+  @apply -translate-y-0.5 shadow-lg;
+}
+
+.btn-primary::after {
+  content: '';
+  @apply absolute inset-0 rounded-full bg-white opacity-0 transition-opacity duration-300;
+}
+
+.btn-primary:hover::after {
+  @apply opacity-10;
+}
+
+/* Card styles */
+.card {
+  @apply bg-black/30 rounded-lg p-4 transition-all duration-200;
+}
+
+.card:hover {
+  @apply bg-black/40 transform scale-[1.02];
+}
+
+/* Search bar styles */
+.search-input {
+  @apply w-full max-w-md px-6 py-3 text-lg bg-[#022c3a] text-accent-cyan rounded-xl outline-none transition-shadow duration-200;
+}
+
+.search-input:focus {
+  box-shadow: 0 4px 24px rgba(0, 128, 128, 0.33);
+}
+
+.search-input::placeholder {
+  @apply text-accent-medium/50;
+}
