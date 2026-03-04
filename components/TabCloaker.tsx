@@ -1,3 +1,4 @@
+
 'use client'
 
 import { useEffect, useState } from 'react'
@@ -35,8 +36,8 @@ export default function TabCloaker() {
     favicon.href = tabCloakOptions.find(o => o.value === value)?.favicon || '/favicon.ico'
   }
 
-  const handleChange = (value:Option) => {
- TabCloak    setSelectedOption(value)
+  const handleChange = (value: TabCloakOption) => {
+    setSelectedOption(value)
     localStorage.setItem('tabCloaker', value)
     applyTabCloak(value)
   }
