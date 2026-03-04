@@ -36,11 +36,8 @@ for added security, navigate to settings and click the 2nd button.
 5. Then, type `npx servor`
 6. This will start a new static site page.
 
-# Credits
-- Credits to all of the people who own the rights to the games, just open an issue to get a game taken down, just provide proof you own the game.
-- Credits to Mercury Workshop for Scramjet that my proxies going forward will depend on to work.
-- Credits to  4texas4 for ratproxy.
-- Credits to the following sources for the games:
-  - UGS for the main games.
-  - GN-Math for the Exotic games.
-  - Other sources for the ones not directly on-site.
+<a href="https://github.com/github.com/KadenSchool1/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=github.com/KadenSchool1" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
