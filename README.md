@@ -36,8 +36,8 @@ for added security, navigate to settings and click the 2nd button.
 5. Then, type `npx servor`
 6. This will start a new static site page.
 
-<a href="https://github.com/github.com/KadenSchool1/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=github.com/KadenSchool1" />
+<a href="https://github.com/KadenSchool1/ireadycollegelearning/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=KadenSchool1/ireadycollegelearning" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
